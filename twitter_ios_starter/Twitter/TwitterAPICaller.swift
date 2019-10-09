@@ -99,5 +99,4 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     }
-
 }

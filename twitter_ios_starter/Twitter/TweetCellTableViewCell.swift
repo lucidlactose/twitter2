@@ -16,9 +16,15 @@ class TweetCellTableViewCell: UITableViewCell {
     @IBOutlet weak var retweetButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
         
+    @IBOutlet weak var mediaImageView: UIImageView!
     var favorited: Bool = false
     var tweetId: Int = -1
 
+    override func awakeFromNib() {
+           super.awakeFromNib()
+           // Initialization 
+       }
+    
     @IBAction func favoriteTweet(_ sender: Any) {
         let toBeFavorited = !favorited
         if (toBeFavorited) {
@@ -64,11 +70,6 @@ class TweetCellTableViewCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
